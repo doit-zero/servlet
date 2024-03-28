@@ -8,6 +8,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public interface ControllerV2 {
+    //컨트롤러가 뷰를 반환하는 특징을 가짐
     MyView process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
-
 }

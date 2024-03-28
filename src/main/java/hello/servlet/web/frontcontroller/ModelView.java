@@ -4,26 +4,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ModelView {
-    private String viewName;
-    private Map<String,Object> model = new HashMap<>();
 
-    public ModelView(String viewName) {
-        this.viewName = viewName;
+    private String viewPath;
+    private Map<String,Object> paramMap = new HashMap<>();
+
+    public ModelView(String viewPath) {
+        this.viewPath = viewPath;
     }
 
-    public String getViewName() {
-        return viewName;
+    public String getViewPath() {
+        return viewPath;
     }
 
-    public void setViewName(String viewName) {
-        this.viewName = viewName;
+    public void setViewPath(String viewPath) {
+        this.viewPath = viewPath;
     }
 
-    public Map<String, Object> getModel() {
-        return model;
+    public Map<String, Object> getParamMap() {
+        return paramMap;
     }
 
-    public void setModel(Map<String, Object> model) {
-        this.model = model;
+    public void setParamMap(Map<String, Object> paramMap) {
+        this.paramMap = paramMap;
     }
 }
