@@ -22,12 +22,10 @@ public class MvcMemberSaveServlet extends HttpServlet {
         Member member = new Member(username,age);
         memberRepository.save(member);
 
-        // Model에 데이터를 보관해야 함
+        // 포워드를 이용해 jsp로 제어를 넘기자
         req.setAttribute("member",member);
-
         String viewPath = "/WEB-INF/views/save-result.jsp";
         RequestDispatcher dispatcher = req.getRequestDispatcher(viewPath);
         dispatcher.forward(req,resp);
-
     }
 }
