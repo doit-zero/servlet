@@ -37,6 +37,5 @@ public class FrontControllerServletV2 extends HttpServlet {
 
         MyView myView = controller.process(request,response); // 컨트롤러는 로직을 수행한 후 마이뷰를 리턴
         myView.render(request,response); // 마이뷰 렌더 과정에서 jsp로 포워드가 일어남
-
     }
 }

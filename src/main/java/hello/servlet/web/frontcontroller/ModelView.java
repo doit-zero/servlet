@@ -6,7 +6,8 @@ import java.util.Map;
 public class ModelView {
 
     private String viewPath;
-    private Map<String,Object> paramMap = new HashMap<>();
+    // model에는 요청 데이터로 비즈니스 로직을 처리한 결과를 담는 곳
+    private Map<String,Object> model = new HashMap<>();
 
     public ModelView(String viewPath) {
         this.viewPath = viewPath;
@@ -20,11 +21,11 @@ public class ModelView {
         this.viewPath = viewPath;
     }
 
-    public Map<String, Object> getParamMap() {
-        return paramMap;
+    public Map<String, Object> getModel() {
+        return model;
     }
 
-    public void setParamMap(Map<String, Object> paramMap) {
-        this.paramMap = paramMap;
+    public void setModel(Map<String, Object> model) {
+        this.model = model;
     }
 }
